@@ -67,8 +67,9 @@ namespace Calling
 
                 if (env.IsDevelopment())
                 {
-                    spa.Options.StartupTimeout = TimeSpan.FromSeconds(120);
-                    spa.UseReactDevelopmentServer(npmScript: "start");
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:3000");
+                    //spa.Options.StartupTimeout = TimeSpan.FromSeconds(120);
+                    //spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
         }

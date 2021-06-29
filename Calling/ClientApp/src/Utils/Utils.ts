@@ -6,7 +6,7 @@ import preval from 'preval.macro';
 
 export const utils = {
   getAppServiceUrl: (): string => {
-    return window.location.origin;
+    return "https:/localhost:5001/api/v1/azure-communication-services"; // window.location.origin;
   },
   getTokenForUser: async (): Promise<CommunicationUserToken> => {
     const response = await fetch('/token');
